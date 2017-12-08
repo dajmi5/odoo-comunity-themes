@@ -1,0 +1,153 @@
+/* Copyright 2016 LasLabs Inc.
+ * License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). */
+
+body {
+    width: 100%;
+    height: 100%;
+
+    // Do not fix the search part, it's too big for small screens
+    @media (max-width: @screen-sm-max) {
+         overflow: scroll; 
+         overflow-y: scroll; 
+         overflow-x: scroll; 
+         -webkit-overflow-scrolling: touch; 
+         .o_main { 
+          .oe-view-manager { 
+              overflow: scroll; 
+              overflow-y: scroll; 
+              overflow-x: scroll; 
+              -webkit-overflow-scrolling: touch; 
+              } 
+        } 
+    } 
+} 
+
+main {
+    width: 100%; 
+    height: 100%; 
+    overflow: scroll; 
+    overflow-y: scroll; 
+    overflow-x: scroll; 
+    -webkit-overflow-scrolling: touch; 
+} 
+.navbar {
+    z-index: 10;
+}
+
+.o_cp_switch_buttons {
+    .active {
+        z-index: 10;
+    }
+}
+
+.o_sub_menu {
+    .o_sub_menu_logo {
+        display: none;
+    }
+    .o_sub_menu_footer {
+        display: none;
+    }
+}
+
+.o_tooltip.active {
+    z-index: 1051;
+}
+
+.o_web_client {
+    >.o_main {
+        overflow: auto;
+        > .o_main_content {
+            overflow: initial;
+            @media (max-width: @screen-xs-max) {
+                > .o_content {
+                    overflow: initial;
+                }
+            }
+        }
+    }
+}
+
+// Remove z-index from CP buttons so it doesn't overlap the menu
+.o_control_panel {
+     .btn-group > .btn.active {
+        z-index: initial;
+    }
+}
+
+.o_chat_window {
+    z-index: 1000;
+}
+
+
+// Custom
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    background-color: inherit;
+}
+.table-condensed > thead > tr > th, .table-condensed > tbody > tr > th, .table-condensed > tfoot > tr > th, .table-condensed > thead > tr > td, .table-condensed > tbody > tr > td, .table-condensed > tfoot > tr > td {
+    padding: 5px 8px;
+}
+
+.nav-tabs > li > a, .dropdown-menu,
+.o_form_view.o_form_editable .o_form_field_many2manytags, .o_form_view.o_form_editable .o_form_field_monetary,
+input[type="text"], input[type="password"], input[type="number"], textarea, select,
+.btn, .btn-group, .btn-sm, .btn-group-sm {
+    border-radius: 0;
+}
+
+.dropdown-menu {
+    border: none;
+    border-top: 2px solid #ccc;
+}
+header > .main-nav > .container-fluid .o_sub_menu > .o_sub_menu_content > .oe_secondary_menu ul.dropdown-menu > li.dropdown-header {
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    padding: 5px 25px;
+}
+.app-drawer-nav .app-drawer-icon-app {
+    max-width: 4em !important;
+    max-height: 4em !important;
+}
+.app-drawer-nav .app-drawer-title {
+    font-weight: 200;
+    margin-top: 3px;
+    color: #fff;
+}
+.app-drawer-nav .panel-body {
+    padding-top: 80px;
+}
+
+// Add background image
+.drawer-nav{
+    background: transparent url('/dashboard-background') no-repeat scroll center center / cover;
+}
+
+
+@media (min-width: 768px) {
+    .navbar {
+        border-radius: 0;
+    }
+}
+.navbar {
+    margin-bottom: 2px;
+    border-bottom: 1px solid #dcdcdc;
+}
+header > .main-nav > .container-fluid .o_sub_menu > .o_sub_menu_content > .oe_secondary_menu > li.app-name > .oe_menu_text {
+    font-size: 18px;
+    text-shadow: #b7b0b0 1px 2px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.o_form_view .o_form_required.o_form_input, .o_form_view .o_form_required .o_form_input, .o_form_view .o_form_required.o_form_textarea, .o_form_view .o_form_required .o_form_textarea {
+    background-color: #e2e5e8;
+}
+.o_form_view .o_form_field_image > .o_form_image_controls > .fa {
+    width: auto;
+    padding: 0;
+    margin: 0;
+}
+.o_form_view .o_group.o_inner_group.oe_subtotal_footer > tbody > tr > td .o_form_field span,
+.o_form_view .o_form_field_monetary > span {
+    padding: 0 3px 0;
+}
