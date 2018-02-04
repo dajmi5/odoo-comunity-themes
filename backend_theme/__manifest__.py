@@ -5,11 +5,13 @@
 {
     "name": "Community Mobile Backend Theme",
     "summary": "Odoo 10.0 Community Backend Theme (based on Openworx Theme)",
-    "version": "10.0.2.0.0",
+    "version": "10.0.2.0.1",
     "category": "Themes/Backend",
     "website": "http://odooabc.com",
         "description": """
                 Backend theme for Odoo 10.0 Community Edition (based on Openworx Theme). More polished and added some responsive CSS rules.
+                
+        v 10.0.2.0.1 - drawer.3.2.0.css added
     """,
         'images':[
         'images/screen.png'
