@@ -1,3 +1,4 @@
 # odoo_comunity_themes
 
-Comunity themes for odoo
+Free Comunity themes for odoo
+gathered from differnt sources for testing purposes
